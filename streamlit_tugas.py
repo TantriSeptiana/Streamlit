@@ -50,7 +50,7 @@ col2.metric("Total Pendapatan (Rp)", f"{total_pendapatan:,.0f}")
 col3.metric("Rata-rata Harga (Rp)", f"{rata_harga:,.0f}")
 
 # TABEL PENJUALAN
-st.header("Data Penjualan Kue")
+st.subheader("Data Penjualan Kue")
 st.dataframe(df)
 
 # TEXT PENJELASAN
@@ -62,7 +62,7 @@ st.text(
 )
 
 # CODE (POTONGAN KODE)
-st.header("Perhitungan Pendapatan")
+st.subheader("Perhitungan Pendapatan")
 
 st.code(
     """
@@ -74,18 +74,18 @@ df["Total Pendapatan (Rp)"] = (
 )
 
 # CHART
-st.header("Visualisasi Data Penjualan")
+st.subheader("Visualisasi Data Penjualan")
 
 col4, col5 = st.columns(2)
 
 with col4:
-    st.subheader("Jumlah Terjual per Jenis Kue")
+    st.text("Jumlah Terjual per Jenis Kue")
     st.bar_chart(
         filtered_df.set_index("Nama Kue")["Jumlah Terjual (pack)"]
     )
 
 with col5:
-    st.subheader("Total Pendapatan per Jenis Kue")
+    st.text("Total Pendapatan per Jenis Kue")
     st.bar_chart(
         filtered_df.set_index("Nama Kue")["Total Pendapatan (Rp)"]
     )
