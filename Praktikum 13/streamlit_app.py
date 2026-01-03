@@ -3,7 +3,7 @@ import pandas as pd
 import plotly.express as px
 
 st.title("Customer Analytics Dashboard")
-df = pd.read_csv("DASHBOARD_CUSTOMER/customers (1).csv")
+df = pd.read_csv("Dashboard_Customers/customers.csv")
 
 st.sidebar.header("Filter Data")
 departments = st.sidebar.multiselect(
