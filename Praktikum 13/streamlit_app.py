@@ -47,8 +47,8 @@ with col1:
     )
     st.plotly_chart(pie_gender)
 
-    with col2:
-        st.subheader("Gaji Rata-rata per Department")
+with col2:
+    st.subheader("Gaji Rata-rata per Department")
 
     salary_dept = (
         df_filtered
