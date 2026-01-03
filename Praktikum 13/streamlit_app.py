@@ -83,7 +83,7 @@ line_age = px.line(
 )
 st.plotly_chart(line_age)
 
-st.subheader("Sebaran Karyawan per Department")
+st.subheader("Sebaran Customer per Department")
 dept_count = df['Department'].value_counts().reset_index()
 dept_count.columns = ['Department', 'Jumlah']
 
